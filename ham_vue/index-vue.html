@@ -3,9 +3,33 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Vue.js</title>
+  <link rel="stylesheet" href="css/style-js.css">
+  <title>JavaScript</title>
 </head>
 <body>
-  こんにちは
+  <h1 class="title">ハンバーガーメニュー（JavaScript）</h1>
+  <div class="main" id="main">
+    <div class="app" id="app">
+      <span class="app_main_btn_line app_btn_line1"></span>
+      <span class="app_btn_line app_btn_line2"></span>
+      <span class="app_btn_line app_btn_line3"></span>
+    </div>
+    <div class="app_hidden" id="app_hidden">
+      <div class="app_hidden_area">
+        <ul class="app_hidden_area_group">
+          <li class="app_hidden_area_group_button">home</li>
+          <li class="app_hidden_area_group_button">about</li>
+          <li class="app_hidden_area_group_button">work</li>
+          <li class="app_hidden_area_group_button">contact</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+  <script>
+    var app = new Vue({//インスタンス作成
+
+    })
+  </script>
 </body>
 </html>
