@@ -11,7 +11,7 @@
   <h1 class="title">ハンバーガーメニュー</h1>
 
   <div class="main" id="main">
-    <div v-on:click="btn"
+    <div v-on:click="isClicked = !isClicked"
     v-bind:class="{ clicked: isClicked }"
     class="main_btn" id="main_btn">
       <span class="main_btn_line main_btn_line1"></span>
@@ -37,11 +37,6 @@
       el: '#main',
       data: {
         isClicked: false
-      },
-      methods: {
-        btn: function(){
-          this.isClicked = !this.isClicked
-        }
       }
     })
   </script>
