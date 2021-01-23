@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style-vue.css">
+  <title>Vue.js</title>
+</head>
+<body>
+
+  <h1 class="title">ハンバーガーメニュー</h1>
+
+  <div class="main" id="main">
+    <div v-on:click="btn" class="main_btn" id="main_btn">
+      <span class="main_btn_line main_btn_line1"></span>
+      <span class="main_btn_line main_btn_line2"></span>
+      <span class="main_btn_line main_btn_line3"></span>
+    </div>
+    <div v-bind:class="{ clicked: isClicked }" class="main_hidden" id="main_hidden">
+      <div class="main_hidden_area">
+        <ul class="main_hidden_area_group">
+          <li class="main_hidden_area_group_button">home</li>
+          <li class="main_hidden_area_group_button">about</li>
+          <li class="main_hidden_area_group_button">work</li>
+          <li class="main_hidden_area_group_button">contact</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+  <script>
+
+    var main = new Vue({
+      el: '#main',
+      data: {
+        isClicked: false
+      },
+      methods: {
+        btn: function(){
+          this.isClicked = !this.isClicked
+        }
+      }
+    })
+  </script>
+</body>
+</html>
