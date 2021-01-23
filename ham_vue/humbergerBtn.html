@@ -11,7 +11,9 @@
   <h1 class="title">ハンバーガーメニュー</h1>
 
   <div class="main" id="main">
-    <div v-on:click="btn" class="main_btn" id="main_btn">
+    <div v-on:click="btn"
+    v-bind:class="{ clicked: isClicked }"
+    class="main_btn" id="main_btn">
       <span class="main_btn_line main_btn_line1"></span>
       <span class="main_btn_line main_btn_line2"></span>
       <span class="main_btn_line main_btn_line3"></span>
