@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style-vue.css">
+  <title>JavaScript</title>
+</head>
+<body>
+
+  <h1 class="title">コンポーネント</h1>
+
+  <div id="app7">
+    <ul>
+      <todo-item
+        v-for="item in groceryList"
+        v-bind:todo="item"
+        v-bind:key="item.id"
+      >
+      </todo-item>
+    </ul>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+  <script>
+
+    Vue.component('todo-item',{
+      props: ['todo'],
+      template: '<li>{{ todo.text }}</li>'
+    })
+
+    var app7 = new Vue({
+      el: '#app7',
+      data: {
+        groceryList:[
+          { id: 0, text: 'tomato'},
+          { id: 1, text: 'banana'},
+          { id: 2, text: 'apple'}
+        ]
+      }
+    })
+  </script>
+</body>
+</html>
